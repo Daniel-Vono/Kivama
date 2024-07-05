@@ -1,0 +1,31 @@
+<RootWidget>:
+
+    chat_layout: chat
+    text_input: text_input
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        ScrollView:
+            size_hint_y: 0.75
+
+            GridLayout:
+                id: chat
+
+                cols: 1
+                size_hint_y: None
+
+                scroll_timeout: 250
+                scroll_distance: 20
+
+
+        TextInput:
+            id: text_input
+            size_hint_y: 0.1
+
+        Button:
+            text: 'Enter'
+            font_size: 14
+            size_hint_y: 0.05
+            on_press: root.enter()
